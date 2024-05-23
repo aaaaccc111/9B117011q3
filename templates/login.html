@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁</title>
+</head>
+<body>
+    <div class="container">
+        <h2>登入頁</h2>
+    <form action="/login" method="post">
+        <label for="idno">身分證號:</label>
+        <input type="text" id="idno" name="idno"><br><br>
+        <label for="pwd">密碼:</label>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="登入"><br><br>
+        <!-- 顯示錯誤消息 -->
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </form>
+    </div>
+</body>
+</html>

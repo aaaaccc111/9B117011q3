@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料檢視</title>
+    <style>
+        table {
+            width: 20%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            float: left;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>會員資料檢視</h2>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>{{ user[1] }}</td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>{{ user[2] }}</td>
+            </tr>
+            <tr>
+                <td>血型</td>
+                <td>{{ user[3] }}</td>
+            </tr>
+            <tr>
+                <td>手機</td>
+                <td>{{ user[4] }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ user[5] }}</td>
+            </tr>
+            <tr>
+                <td>身分證號</td>
+                <td>{{ user[6] }}</td>
+            </tr>
+            <tr>
+                <td>密碼</td>
+                <td>{{ user[7] }}</td>
+            </tr>
+        </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a href="{{ url_for('edit') }}">修改個人資料</a>
+        <a href="{{ url_for('login') }}">登出</a>
+
+    </div>
+</body>
+</html>

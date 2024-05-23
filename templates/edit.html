@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改個人資料</title>
+</head>
+<body>
+    <div class="container">
+        <h2>修改個人資料</h2>
+        <form action="" method="post">
+            <label for="nm">姓名:</label>
+            <input type="text" id="nm" name="nm" value="{{ user[1] }}"><br>
+            <label for="birth">生日:</label>
+            <input type="text" id="birth" name="birth" value="{{ user[2] }}"><br>
+            <label for="blood">血型:</label>
+            <input type="text" id="blood" name="blood" value="{{ user[3] }}"><br>
+            <label for="phone">手機:</label>
+            <input type="text" id="phone" name="phone" value="{{ user[4] }}"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ user[5] }}"><br>
+            <label for="idno">身分證號:</label>
+            <input type="text" id="idno" name="idno" value="{{ user[6] }}" ><br>
+            <label for="pwd">密碼:</label>
+            <input type="text" id="pwd" name="pwd" value="{{ user[7] }}"><br>
+            <input type="submit" value="送出">
+            <a href="{{ url_for('login') }}">登出</a>
+        </form>
+    </div>
+</body>
+</html>
